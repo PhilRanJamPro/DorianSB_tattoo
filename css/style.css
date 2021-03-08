@@ -413,6 +413,7 @@ background: rgb(0, 0,0, 0.4);
   opacity: 0.7;
 }
 /* Les artistes section  */
+
 .profile-card{
             position:relative;
             overflow: hidden;
@@ -522,13 +523,13 @@ background: rgb(0, 0,0, 0.4);
             margin:0 4px;
         }
         .profile-card .profile-content .social-link li a{
-            color:#333;
+            color:#fff;
             width:30px;
             height:25px;
             line-height:24px;
             text-align: center;
             border-radius:5px;
-            background-color: #fff;
+            background-color: #700101;
         }
 /* Callback form */
 .callback-form {
