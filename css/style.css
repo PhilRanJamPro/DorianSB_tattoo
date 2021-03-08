@@ -278,7 +278,7 @@ background: rgb(0, 0,0, 0.4);
 
 #progress-bar-container li.active:before, #progress-bar-container li:hover:before {
 	border:solid 2px #ec0e0d;
-  background: url(/img/check.jpg) no-repeat center center/cover;
+  background: url(../img/check.jpg) no-repeat center center/cover;
   background-size:contain;
 }
 
