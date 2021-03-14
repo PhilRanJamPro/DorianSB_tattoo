@@ -53,6 +53,8 @@ img{
   top: 0px;
   padding: 0 30px;
   transition: 0.5s;
+  z-index: 9999991;
+  
 }
 .navbar.top {
   background: transparent;
@@ -90,9 +92,9 @@ img{
   align-items: center;
 }
 
-.navbar .logo{
+/* .navbar .logo{
   font-weight: 400;
-}
+} */
 
 .logo-navbar-middle {
   width: 10px;
@@ -171,8 +173,12 @@ img{
 
 .image{
   width:20%;
+  transform: translateY(10px) scale(1);
+  transition: transform .5s ease;
 }
-
+.resize_logo{
+  transform:scale(.8);
+}
 /* Header */
 
 .hero {
@@ -492,12 +498,23 @@ background: rgb(0, 0,0, 0.4);
             opacity:1;
             transform: translateY(0);
         }
+        .profile-card .title::after{
+          opacity: 0;
+          content:"";
+          display:block;
+          width:50%;
+          margin:10px auto;
+          border-bottom:2px solid #700101;
+          transition: opacity .8s ease;
+        }
         .profile-card:hover .title::after{
             content:"";
             display:block;
+            opacity:1;
             width:50%;
             margin:10px auto;
             border-bottom:2px solid #700101;
+
         }
         .profile-card .profile-content .title > span{
             display:block;
@@ -512,10 +529,14 @@ background: rgb(0, 0,0, 0.4);
             cursor:pointer;
             transform: translateY(100px);
             transition:all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.20s;
+
         }
         .profile-card:hover .social-link{
             opacity:1;
             transform: translateY(0);
+            z-index: 2;
+            position: relative;
+            /* display: inline-block; */
         }
         .profile-card .profile-content .social-link li{
             display: inline-block;
@@ -530,6 +551,69 @@ background: rgb(0, 0,0, 0.4);
             text-align: center;
             border-radius:5px;
             background-color: #700101;
+        }
+
+
+        /* Testimonials */
+        .rev-section{
+          margin: auto;
+          padding: 0 1rem;
+          max-width: 1100px;
+          text-align: center;
+        }
+        
+        .reviews{
+          margin: 0 auto 3rem auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .review{
+          margin: 0 1rem;
+          min-width: 300px;
+          flex: 1;
+        }
+        
+        .head-review{
+          margin: 0 auto 1.75rem;
+          width: 150px;
+          height: 150px;
+        }
+        .img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: 0 10px 25px rgb(112, 1, 1, .5);
+        }
+        
+        .body-review{
+          background-color: rgb(238, 238, 238);
+          padding: 2.5rem;
+          box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
+        }
+        .name-review{
+          font-size: 1.5rem;
+          color: rgb(50, 50, 50);
+          margin-bottom: .25rem;
+        }
+        .place-review{
+          color: red;
+          font-style: italic;
+        }
+        .rating{
+          color: rgb(253, 180, 42);
+          margin: 1rem 0;
+        }
+        .desc-review{
+          line-height: 1.5rem;
+          letter-spacing: 1px;
+          color: rgb(150, 150, 150);
+        }
+        
+        @media (max-width: 678px){
+          .review{
+            margin-top: 1.5rem;
+          }
         }
 /* Callback form */
 .callback-form {

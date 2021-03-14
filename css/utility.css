@@ -129,7 +129,7 @@ object-fit: fill;
 }
 
 .section-padding {
-  padding: 20px 20px 40px;
+  padding: 20px 20px 0;
 }
 
 /* Flex Grid */
